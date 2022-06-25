@@ -4,11 +4,8 @@ test.beforeEach(async ({ page }) => {
     await page.goto('https://qa-library-dev.herokuapp.com/library-login');
 });
 
-test.describe('login', () => {
-    test('login', async ({ page }) => {
-        await page.type('#email', 'cskow@tapqa.com')
-        await page.type('#password', 'password')
-        await page.click('#submit-button')
+test.describe('articles', () => {
+    test.only('articles show', async ({ page }) => {
         await page.click('#search-button')
     })
 })
